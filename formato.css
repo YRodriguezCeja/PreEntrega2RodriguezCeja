@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+/*font-family: 'Bebas Neue', sans-serif;*/
+
+h1{
+    font-family:'Bebas Neue', cursive;
+    font-size: larger;
+    color: #fffffffe;
+    background-color: rgba(0, 0, 255, 0);
+    height: auto;
+    width: auto;
+    overflow: auto;
+}
+.logo{
+    height: 80px;
+    width: auto;
+    display: inline-block; 
+    padding: 5px;
+    padding-top: 10px;
+}
+
+
+.fondo{
+    background-color: #074f0bcd;
+}
+
+#centrado{
+    text-align: center;
+}
+ul li{
+    text-align: left;
+    
+}
+li a{
+    color: rgba(36, 11, 204, 0.886);
+    font-size: 15px;
+    font-family:'Bebas Neue', cursive ;
+}
+div iframe{
+    background-color: rgba(0, 0, 255, 0);
+    border: 2px solid #ff0;
+    height: 200px;
+    width: 300px;
+    display: block; 
+    padding: 20px;
+    padding-top: 10px;
+}
+div img{
+    background-color: rgba(0, 0, 255, 0);
+    height: 200px;
+    width: 300px;
+    display: inline-block ; 
+    padding: 20px;
+    padding-top: 10px;
+}
+div p{
+    background-color: rgba(9, 204, 12, 0);
+    border: 2px solid #ff0;
+    height: 100px;
+    width: auto;
+    display: inline-block; 
+    padding: 20px;
+    padding-top: 10px;
+}
+
+footer nav{
+    text-align: center;
+    background-color: rgba(11, 88, 18, 0.629);
+    height: 100;
+    display: inline-block table-footer-group; 
+}
