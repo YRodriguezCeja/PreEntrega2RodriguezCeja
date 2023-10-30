@@ -1,72 +1,104 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-
-
-/*font-family: 'Bebas Neue', sans-serif;*/
-
-h1{
-    font-family:'Bebas Neue', cursive;
-    font-size: larger;
-    color: #fffffffe;
-    background-color: rgba(0, 0, 255, 0);
-    height: auto;
-    width: auto;
-    overflow: auto;
-}
-.logo{
-    height: 80px;
-    width: auto;
-    display: inline-block; 
-    padding: 5px;
-    padding-top: 10px;
+* {
+    box-sizing: border-box;
 }
 
-
-.fondo{
-    background-color: #074f0bcd;
+body {
+    font-family: Arial;
+    padding: 10px;
+    background: #f1f1f1;
 }
 
-#centrado{
+/* Header/Blog Title */
+.header {
+    padding: 30px;
     text-align: center;
-}
-ul li{
-    text-align: left;
-    
-}
-li a{
-    color: rgba(36, 11, 204, 0.886);
-    font-size: 15px;
-    font-family:'Bebas Neue', cursive ;
-}
-div iframe{
-    background-color: rgba(0, 0, 255, 0);
-    border: 2px solid #ff0;
-    height: 200px;
-    width: 300px;
-    display: block; 
-    padding: 20px;
-    padding-top: 10px;
-}
-div img{
-    background-color: rgba(0, 0, 255, 0);
-    height: 200px;
-    width: 300px;
-    display: inline-block ; 
-    padding: 20px;
-    padding-top: 10px;
-}
-div p{
-    background-color: rgba(9, 204, 12, 0);
-    border: 2px solid #ff0;
-    height: 100px;
-    width: auto;
-    display: inline-block; 
-    padding: 20px;
-    padding-top: 10px;
+    background: white;
 }
 
-footer nav{
+.header h1 {
+    font-size: 50px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
     text-align: center;
-    background-color: rgba(11, 88, 18, 0.629);
-    height: 100;
-    display: inline-block table-footer-group; 
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+    float: left;
+    width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+    float: left;
+    width: 25%;
+    background-color: #f1f1f1;
+    padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+
+    .leftcolumn,
+    .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 40px) {
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
 }
