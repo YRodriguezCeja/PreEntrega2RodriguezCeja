@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Sans:ital,wght@0,100;0,200;1,100;1,200&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+/* font-family: 'Bebas Neue', sans-serif;
+font-family: 'Fira Sans', sans-serif;
+font-family: 'Lora', serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lora', serif;
+}
+
+/* formato general del texto */
+body {
+    font-family: 'Bebas Neue', sans-serif;
+    padding: 10px;
+    background: rgb(250, 249, 249);
+}
+
+/* formato del header */
+.header {
+    padding: 30px;
+    text-align: center;
+    background: rgba(122, 119, 119, 0.806);
+}
+
+.header h1 {
+    font-size: 50px;
+    color: #f2f2f2;
+}
+
+/* estilos de la barra de menu */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* estilos de los link de la barra de menú */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* estilo del fondo de la barra de menus */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* formato de titulo de galeria de servicios */
+h2{
+    text-align: center;
+    background-color: #135119ae;
+    color: #fff;
+    text-shadow: 0 0 0px #000;
+    padding: 15px;
+    
+}
+
+/* formato de la galeria de servicios usando disply grids */
+.galeria{
+    height: auto;
+    background-color: #aaa;
+    display: grid; 
+    grid-template-columns: 1fr;
+    grid-row: repeat(8, 200px);
+    padding: 10px;
+    grid-gap: 10px
+}
+
+/* formato general de cada seccion item */
+.item{
+    border: 5px solid rgba(83, 81, 80, 0.74);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: #fff;
+    text-shadow:0 0 5px #000;
+    font-size: 30px;
+    transition: all 0.9s;
+}
+.item:hover{ 
+    transform: scale(0.9);
+}
+
+/* enlaces de cada imagen de galeria de servicios */
+.item1{
+    background-image: url(multimedia/evento1.jpg);
+}
+.item2{
+    background-image: url(multimedia/evento2.jpg);
+}
+.item3{
+    background-image: url(multimedia/evento3.jpg);
+}
+.item4{
+    background-image: url(multimedia/evento4.png);
+}
+.item5{
+    background-image: url(multimedia/evento5.jpg);
+}
+.item6{
+    background-image: url(multimedia/evento6.jpg);
+}
+.item7{
+    background-image: url(multimedia/evento7.webp);
+}
+.item8{
+    background-image: url(multimedia/evento8.jpg);
+}
+
+/* creacion de dos columnas una al lado de la otra */
+.leftcolumn {
+    float: left;
+    width: 70%;
+}
+
+.rightcolumn {
+    float: left;
+    width: 30%;
+    background-color: #f1f1f1;
+    padding-left: 20px;
+}
+
+/* apartado de formato para las imagenes falsas q me ayudan a dar formato */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+
+/* agregando efectos a las secciones que se llamaron -card- */
+.card {
+    background-color: white;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+/* dando formato a mis filas de la pagina principal */
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* formato del footer */
+.footer {
+    padding: 0;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+}
+
+.foo,h5{
+    text-align: center;
+}
+
+/* Generando la resposividad de la pagina de inicio  con media quierys*/
+@media screen and (max-width: 992px) {
+    .leftcolumn,
+    .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 40px) {
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
+}
+
+/* Generando resposividad de la pagina de servicios */
+@media only screen and (min-width:480px) {
+    .galeria{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 200px);
+    }
+}
+
+@media only screen and (min-width:768px) {
+    .galeria{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(5, 200px);
+    }
+    .item1{
+        grid-column:1/3 ;
+        grid-row: 1/2 ;
+    }
+    .item2{
+        grid-column: 1/3;
+        grid-row: 2/3;
+    }
+    .item3{
+        grid-column:1/3 ;
+        grid-row: 3/4;
+    }
+    .item4{
+        grid-column:3/4 ;
+        grid-row:1/3 ;
+    }
+    .item5{
+        grid-column: 3/4;
+        grid-row:3/4 ;
+    }
+    .item6{
+        grid-column: 2/4;
+        grid-row:4/6 ;
+    }
+    .item7{
+        grid-column: 1/2;
+        grid-row:4/5 ;
+    }
+    .item8{
+        grid-column:1/2 ;
+        grid-row:5/6 ;
+    }
+}
